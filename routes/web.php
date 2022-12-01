@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\LogincController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/dologin',[LogincController::class,'dologin'])->name('do.login');
