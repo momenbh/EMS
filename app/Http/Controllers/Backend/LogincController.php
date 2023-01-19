@@ -15,7 +15,7 @@ class LogincController extends Controller
         {
             
        
-            return redirect()->back()->with('message','login successfully');
+            return redirect()->route('home.blade')->with('message','login successfully');
         }
         else{
             return redirect()->back()->with('message','incorrect password');
