@@ -85,7 +85,10 @@
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/5.3/examples/dashboard/dashboard.css" rel="stylesheet">
 </head>
+{{-- @if(session()->has('message'))
 
+<p class="alert alert-danger">{{session()->get('message')}}</p>
+@endif --}}
 
 <body>
     
@@ -128,7 +131,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('do.registration') }}"method="POSt">
+                    <form action="{{ route('do.registration') }}" method="POSt">
                         @csrf
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name" class="form-control" required>

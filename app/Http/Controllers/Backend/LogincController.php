@@ -8,16 +8,19 @@ use Illuminate\Support\Facades\Auth;
 
 class LogincController extends Controller
 {
-    public function dologin(Request $request)
+    public function dologin (Request $request)
     {
+        // dd($request->all());
         $credenials=$request->only(['email','password']);
         if(Auth::attempt($credenials))
+    
         {
-            
-       
-            return redirect()->route('home.blade')->with('message','login successfully');
+
+
+            return redirect()->route('dashbord.home')->with('message','login successfully');
         }
-        else{
+        else
+        {
             return redirect()->back()->with('message','incorrect password');
         }
     }
