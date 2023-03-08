@@ -15,7 +15,7 @@ class Bladecontroller extends Controller
         return view('home');
     }
 
-    public function registration(Request $request){
+    public function registration (Request $request){
     //  dd($request->all());
     $request->validate([
 

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\Bladecontroller;
 use App\Http\Controllers\Backend\LogincController;
+use App\Http\Controllers\Backend\Productcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,5 @@ Route::get('/blade',[Bladecontroller::class,'blade'])->name('home.blade');
 //user registration/login
 Route::post('/do-registration',[Bladecontroller::class,'registration'])->name('do.registration');
 Route::post('/do-login',[Bladecontroller::class,'login'])->name('do.login');
+//product
+Route::get('product/create',[Productcontroller::class,'product'])->name('create.product');
