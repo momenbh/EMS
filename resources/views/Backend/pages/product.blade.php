@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,4 +9,9 @@
 <body>
     <h1 style="color: red">Momen</h1>
 </body>
-</html>
+</html> --}}
+@extends('home')
+@section('backend_content')
+<h1 style="color:green">create</h1>
+<a href="{{route('product.form')}}" class="btn btn-danger">add</a>
+@endsection

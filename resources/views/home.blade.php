@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.108.0">
-    <title>Home</title>
+    <title>EMS</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
 
@@ -113,12 +113,24 @@
 
     @include('Backend.fixed.sidebar')
 
-
+    
 
 
 
 
     <!--endsidebar-->
+    <!--content-->
+     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      
+ 
+
+    @yield('backend_content')
+
+     
+    </main>
+  
+    <!--endcontent-->
+
     <!--model-->
 
 

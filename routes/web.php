@@ -28,4 +28,6 @@ Route::get('/blade',[Bladecontroller::class,'blade'])->name('home.blade');
 Route::post('/do-registration',[Bladecontroller::class,'registration'])->name('do.registration');
 Route::post('/do-login',[Bladecontroller::class,'login'])->name('do.login');
 //product
-Route::get('product/create',[Productcontroller::class,'product'])->name('create.product');
+Route::get('product/create',[Productcontroller::class,'product'])->name('product.create');
+Route::get('create/product/from',[Productcontroller::class,'form'])->name('product.form');
+Route::post('create/product/store',[Productcontroller::class,'store'])->name('product.store');

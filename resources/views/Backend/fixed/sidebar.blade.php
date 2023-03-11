@@ -16,7 +16,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('create.product')}}">
+                        <a class="nav-link" href="{{route('product.create')}}">
                             <span data-feather="shopping-cart" class="align-text-bottom"></span>
                             Products
                         </a>
@@ -39,10 +39,7 @@
                             Integrations
                         </a>
                     </li>
-                </ul>
-         @include('backend_content')
-              
-              
+                </ul>     
             </div>
         </nav>
 
