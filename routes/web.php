@@ -33,3 +33,6 @@ Route::get('create/product/from',[Productcontroller::class,'form'])->name('produ
 Route::post('create/product/store',[Productcontroller::class,'store'])->name('product.store');
 //product edit
 Route::get('product/delete/{id}',[Productcontroller::class,'delete'])->name('product.delete');
+Route::get('product/view/{id}',[Productcontroller::class,'view'])->name('product.view');
+Route::get('product/edit/{id}',[Productcontroller::class,'edit'])->name('product.edit');
+Route::post('product/update/{id}',[Productcontroller::class,'update'])->name('product.update');

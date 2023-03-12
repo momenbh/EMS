@@ -28,19 +28,19 @@
            </tr>
         </thead>
         <tbody>
-            @foreach ($product as $data )
+            @foreach ($product as $key=>$data )
                 
             
             <tr>
-                <td scope="col">{{$data->id}}</td>
+                <td scope="col">{{$key+1}}</td>
                 <td scope="col">{{$data->name}}</td>
                 <td scope="col">{{$data->phone_number}}</td>
                 <td scope="col">{{$data->email}}</td>
                 <td scope="col">{{$data->date_of_birth}}</td>
                 <td scope="col">{{$data->age}}</td>
                 <td scope="col">
-                    <a href=""class="btn btn-primary">view</a>
-                    <a href=""class="btn btn-success">edit</a>
+                    <a href="{{route('product.view',$data->id)}}"class="btn btn-primary">view</a>
+                    <a href="{{route('product.edit',$data->id)}}"class="btn btn-success">edit</a>
                     <a href="{{route('product.delete',$data->id)}}"class="btn btn-info">delete</a>
                 </td>
                 
