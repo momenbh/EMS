@@ -31,3 +31,5 @@ Route::post('/do-login',[Bladecontroller::class,'login'])->name('do.login');
 Route::get('product/create',[Productcontroller::class,'product'])->name('product.create');
 Route::get('create/product/from',[Productcontroller::class,'form'])->name('product.form');
 Route::post('create/product/store',[Productcontroller::class,'store'])->name('product.store');
+//product edit
+Route::get('product/delete/{id}',[Productcontroller::class,'delete'])->name('product.delete');

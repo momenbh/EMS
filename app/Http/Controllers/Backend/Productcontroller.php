@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Redirect;
 class Productcontroller extends Controller
 {
     public function product(){
-        return view('Backend.pages.product');
+        $product=Product::paginate(3);
+        return view('Backend.pages.product',compact('product'));
         
         return redirect()->back();
     }
@@ -26,7 +27,11 @@ class Productcontroller extends Controller
             'age'=>$request->age,
 
         ]);
-        return redirect()->back()->with('message','information submit successfully');
+        return redirect()->route('product.create')->with('message','information submit successfully');
+    }
+    public function delete($id){
+        Product::find($id)->delete();
+        return redirect()->back();
     }
       
 }
